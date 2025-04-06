@@ -41,7 +41,7 @@
                                 <td class="px-4 sm:px-6 py-4 whitespace-nowrap text-sm sm:text-base text-gray-700">
                                     2024-03-15</td>
                                 <td class="px-4 sm:px-6 py-4 whitespace-nowrap text-sm sm:text-base text-gray-700">
-                                    $1,500.00</td>
+                                    ₱1,500.00</td>
                                 <td class="px-4 sm:px-6 py-4 whitespace-nowrap">
                                     <span
                                         class="inline-block px-2 sm:px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs sm:text-sm font-medium">Paid</span>
@@ -55,7 +55,7 @@
                                 <td class="px-4 sm:px-6 py-4 whitespace-nowrap text-sm sm:text-base text-gray-700">
                                     2024-03-20</td>
                                 <td class="px-4 sm:px-6 py-4 whitespace-nowrap text-sm sm:text-base text-gray-700">
-                                    $2,300.00</td>
+                                    ₱2,300.00</td>
                                 <td class="px-4 sm:px-6 py-4 whitespace-nowrap">
                                     <span
                                         class="inline-block px-2 sm:px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs sm:text-sm font-medium">Pending</span>
@@ -96,15 +96,15 @@
                     <div class="space-y-3 sm:space-y-4">
                         <div class="flex justify-between items-center">
                             <span class="text-gray-600 text-sm sm:text-base">Total Invoiced</span>
-                            <span class="font-semibold text-gray-900 text-sm sm:text-base">$5,800.00</span>
+                            <span class="font-semibold text-gray-900 text-sm sm:text-base">₱5,800.00</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-600 text-sm sm:text-base">Pending Amount</span>
-                            <span class="font-semibold text-gray-900 text-sm sm:text-base">$2,300.00</span>
+                            <span class="font-semibold text-gray-900 text-sm sm:text-base">₱2,300.00</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-600 text-sm sm:text-base">Paid This Month</span>
-                            <span class="font-semibold text-gray-900 text-sm sm:text-base">$3,500.00</span>
+                            <span class="font-semibold text-gray-900 text-sm sm:text-base">₱3,500.00</span>
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                                         class="block text-sm sm:text-base font-medium text-gray-700 mb-1 sm:mb-2">Amount</label>
                                     <input type="text" id="invoice-amount" name="invoice-amount"
                                         class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-md text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                        placeholder="$0.00" required>
+                                        placeholder="₱0.00" required>
                                 </div>
                             </div>
                         </form>
@@ -195,7 +195,7 @@
                         <div class="space-y-2 sm:space-y-3">
                             <p class="text-gray-700 text-sm sm:text-base"><strong>Invoice #:</strong> INV-001</p>
                             <p class="text-gray-700 text-sm sm:text-base"><strong>Date:</strong> 2024-03-15</p>
-                            <p class="text-gray-700 text-sm sm:text-base"><strong>Amount:</strong> $1,500.00</p>
+                            <p class="text-gray-700 text-sm sm:text-base"><strong>Amount:</strong> ₱1,500.00</p>
                             <p class="text-gray-700 text-sm sm:text-base"><strong>Status:</strong> Paid</p>
                         </div>
                     </div>
@@ -231,7 +231,7 @@
                         <div class="space-y-2 sm:space-y-3">
                             <p class="text-gray-700 text-sm sm:text-base"><strong>Invoice #:</strong> INV-002</p>
                             <p class="text-gray-700 text-sm sm:text-base"><strong>Date:</strong> 2024-03-20</p>
-                            <p class="text-gray-700 text-sm sm:text-base"><strong>Amount:</strong> $2,300.00</p>
+                            <p class="text-gray-700 text-sm sm:text-base"><strong>Amount:</strong> ₱2,300.00</p>
                             <p class="text-gray-700 text-sm sm:text-base"><strong>Status:</strong> Pending</p>
                         </div>
                     </div>

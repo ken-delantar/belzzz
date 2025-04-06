@@ -16,7 +16,7 @@ class VehicleSeeder extends Seeder
         // Sample vehicle records
         $vehicles = [
             [
-                'vehicle_number' => 'TRK-004',
+                'vehicle_number' => 'TRK-001',
                 'truck_type' => 'Cargo Truck',
                 'route_from' => 'Manila',
                 'route_to' => 'Laog',
@@ -32,7 +32,7 @@ class VehicleSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'vehicle_number' => 'TRK-005',
+                'vehicle_number' => 'TRK-002',
                 'truck_type' => 'Refrigerated Truck',
                 'route_from' => 'Laog',
                 'route_to' => 'Manila',
@@ -48,7 +48,7 @@ class VehicleSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'vehicle_number' => 'TRK-006',
+                'vehicle_number' => 'TRK-003',
                 'truck_type' => 'Tanker Truck',
                 'route_from' => 'Manila',
                 'route_to' => 'Loag',

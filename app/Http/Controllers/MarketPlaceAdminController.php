@@ -18,7 +18,7 @@ class MarketPlaceAdminController extends Controller
 
         if (Auth::check()) {
             $user = Auth::user();
-            if ($user->role === 'Admin') {
+            if ($user->role === 'Admin' || $user->role === 'Secretary') {
                 // Admins see the count of all cart items and pending approval requests
                 $cartItems = Cart::with('product')->get();
                 $pendingApprovalCount = Order::where('approval_status', 'Pending Approval')->count();
@@ -72,7 +72,7 @@ class MarketPlaceAdminController extends Controller
     {
         $user = Auth::user();
 
-        if ($user->role === 'Admin') {
+        if ($user->role === 'Admin' || $user->role === 'Secretary') {
             // Admins see all cart records
             $cartItems = Cart::with('product.vendor.user', 'user')->get();
         } else {
@@ -201,7 +201,7 @@ class MarketPlaceAdminController extends Controller
         }
 
         $user = Auth::user();
-        $approvalStatus = $user->role === 'Admin' ? 'Approved' : 'Pending Approval';
+        $approvalStatus = ($user->role === 'Admin' || $user->role === 'Secretary') ? 'Approved' : 'Pending Approval';        
         // dd($approvalStatus);
         $order = Order::create([
             'user_id' => Auth::id(),
@@ -234,7 +234,7 @@ class MarketPlaceAdminController extends Controller
         Cart::whereIn('id', $selectedIds)->delete();
 
         flash()->success('Procurement request submitted successfully!');
-        if ($user->role === 'Admin') {
+        if ($user->role === 'Admin' || $user->role === 'Secretary') {
             return redirect()->route('marketplace.admin.orders');
         } else {
             return redirect()->route('marketplace.admin.staff_requests');
@@ -272,7 +272,7 @@ class MarketPlaceAdminController extends Controller
             $product->decrement('stock', $quantity);
         }
 
-        if (Auth::user()->role === 'Admin') {
+        if (Auth::user()->role === 'Admin' || Auth::user()->role === 'Secretary') {
             return redirect()->route('marketplace.admin.cart', ['buy_product_id' => $product->id]);
         } else {
             flash()->success("Added $quantity x {$product->name} to your procurement list!");

@@ -42,7 +42,9 @@ class VehicleInventoryController extends Controller
         }
 
         $vehicle = VehicleInventory::create($data);
+        
         flash()->success('Bus added successfully!');
+
         return response()->json(['redirect' => route('vehicles.index')], 201);
     }
 

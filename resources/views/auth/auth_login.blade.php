@@ -10,11 +10,19 @@
         .gradient-bg {
             background: linear-gradient(135deg, #0fbcf9 0%, #554dde 100%);
         }
+
+        body {
+            background-image: url('{{ asset('assets/images/bus-background.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh; /* Ensure the background covers the entire height of the page */
+        }
     </style>
 </head>
 
 <body class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl shadow-xl overflow-hidden max-w-4xl w-full flex">
+    <div class="bg-white bg-opacity-65 backdrop-blur-lg  rounded-3xl shadow-xl overflow-hidden max-w-4xl w-full flex">
         <!-- Left Side - Welcome Section -->
         <div class="gradient-bg w-1/2 p-12 hidden md:block relative">
             <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -36,7 +44,7 @@
         <div class="w-full md:w-1/2 p-8 md:p-12">
             <div class="max-w-md mx-auto">
                 <h2 class="text-3xl font-bold text-gray-800 mb-2">Login</h2>
-                <p class="text-gray-500 mb-8">Welcome back! Please login to your account.</p>
+                <p class="text-gray-800 mb-8">Welcome back! Please login to your account.</p>
 
                 <!-- Session Status -->
                 <x-auth-session-status class="mb-4 text-gray-600" :status="session('status')" />
@@ -73,7 +81,7 @@
                             <span class="text-gray-600">{{ __('Remember me') }}</span>
                         </label> --}}
                         @if (Route::has('password.request'))
-                            <a href="{{ route('password.request') }}" class="text-sm text-gray-400 hover:text-blue-500">
+                            <a href="{{ route('password.request') }}" class="text-sm text-gray-900 hover:text-blue-500">
                                 {{ __('Forgot your password?') }}
                             </a>
                         @endif
@@ -86,7 +94,7 @@
                     </button>
 
                     <!-- Sign Up Link -->
-                    <p class="text-center mt-8 text-gray-500">
+                    <p class="text-center mt-8 text-gray-900">
                         New User?
                         <a href="{{ route('register') }}"
                             class="text-blue-600 hover:text-blue-700 font-medium">Signup</a>

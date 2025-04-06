@@ -10,11 +10,19 @@
         .gradient-bg {
             background: linear-gradient(135deg, #0fbcf9 0%, #554dde 100%);
         }
+
+        body {
+            background-image: url('{{ asset('assets/images/bus-background.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh; /* Ensure the background covers the entire height of the page */
+        }
     </style>
 </head>
 
 <body class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl shadow-xl overflow-hidden max-w-4xl w-full flex">
+    <div class="bg-white bg-opacity-65 backdrop-blur-lg rounded-3xl shadow-xl overflow-hidden max-w-4xl w-full flex">
         <!-- Left Side - Welcome Section -->
         <div class="gradient-bg w-1/2 p-12 hidden md:block relative">
             <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -36,7 +44,7 @@
         <div class="w-full md:w-1/2 p-8 md:p-10">
             <div class="max-w-md mx-auto">
                 <h2 class="text-3xl font-bold text-gray-800 mb-2">Register</h2>
-                <p class="text-gray-500 mb-6">Create your account to get started.</p>
+                <p class="text-gray-700 mb-6">Create your account to get started.</p>
 
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
@@ -94,6 +102,7 @@
                                 <option value="" disabled selected>🔽 Choose a Role</option>
                                 <option value="Vendor">📦 Vendor</option>
                                 <option value="Driver">🚛 Driver</option>
+                                <option value="Secretary">Secretary</option>
                             </select>
                             <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
                                 <svg class="w-4 h-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -132,7 +141,7 @@
 
                     <!-- Submit and Login Link -->
                     <div class="flex items-center justify-between mt-4">
-                        <a href="{{ route('login') }}" class="text-sm text-gray-400 hover:text-blue-500">
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 hover:text-blue-500">
                             {{ __('Already registered? Login here') }}
                         </a>
                         <button type="submit"

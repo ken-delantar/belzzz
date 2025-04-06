@@ -22,7 +22,7 @@
                     @if (Auth::user()->role === 'Driver')
                         <button onclick="openModal()"
                             class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-sm sm:text-base font-semibold">
-                            <span class="text-lg sm:text-xl">+</span> Schedule Task
+                            <span class="text-lg sm:text-xl">+</span> Report
                         </button>
                     @endif
                 </div>

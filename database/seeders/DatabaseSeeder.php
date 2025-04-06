@@ -28,17 +28,17 @@ class DatabaseSeeder extends Seeder
         //     'role' => 'Vendor'
         // ]);
 
-        User::factory()->create([
-            'name' => 'Fariñas Admin',
-            'email' => 'admin@logistic.com',
-            'password' => 'W5`D[8wqu04I',
-            'role' => 'Admin'
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Fariñas Admin',
+        //     'email' => 'admin@logistic.com',
+        //     'password' => 'W5`D[8wqu04I',
+        //     'role' => 'Admin'
+        // ]);
 
         User::factory()->create([
-            'name' => 'Fariñas Secretary',
+            'name' => 'Ms. Gloria Bennett S. Charity',
             'email' => 'secretary@logistic.com',
-            'password' => 'W5`D[8wqu04I',
+            'password' => 'n4*9o#I1eWR1zOw5?id-',
             'role' => 'Secretary'
         ]);
 

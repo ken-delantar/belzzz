@@ -10,7 +10,8 @@
     </button>
 
     <!-- Sidebar Header -->
-    <div class="p-4 flex items-center border-b border-blue-700">
+    <div class="p-4 flex gap-2 items-center border-b border-blue-700">
+        <img src="{{ asset('assets/images/logo.png') }}" alt="" width="50px" height="auto" style="border-radius: 50%; padding: 2px; background-color: white">
         <span class="font-semibold text-lg tracking-tight md:text-xl">
             {{ Auth::check()
                 ? (Auth::user()->role === 'Admin'
@@ -39,11 +40,11 @@
 
         <!-- Admin Routes -->
         @if (Auth::user()->role === 'Admin')
-            <x-nav-item href="{{ route('marketplace.admin.store') }}"
+            {{-- <x-nav-item href="{{ route('marketplace.admin.store') }}"
                 active="{{ Route::currentRouteName() === 'marketplace.admin.store' }}"
                 icon="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z">
                 Procurement Portal
-            </x-nav-item>
+            </x-nav-item> --}}
             <x-nav-item href="{{ route('vehicles.index') }}"
                 active="{{ Route::currentRouteName() === 'vehicles.index' }}"
                 icon="M9 17V7m0 10h6m-6 0a2 2 0 110-4 2 2 0 010 4zm6 0a2 2 0 110-4 2 2 0 010 4zM5 7h14a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2z">
@@ -59,11 +60,11 @@
                 icon="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z">
                 Maintenance Management
             </x-nav-item>
-            <x-nav-item href="{{ route('reports.vendor') }}"
+            {{-- <x-nav-item href="{{ route('reports.vendor') }}"
                 active="{{ Route::currentRouteName() === 'reports.vendor' }}"
                 icon="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
                 Write a Review
-            </x-nav-item>
+            </x-nav-item> --}}
         @elseif(Auth::user()->role == 'Secretary')
             <x-nav-item href="{{ route('marketplace.admin.store') }}"
                 active="{{ Route::currentRouteName() === 'marketplace.admin.store' }}"
@@ -74,6 +75,11 @@
                 active="{{ Route::currentRouteName() === 'vehicles.index' }}"
                 icon="M9 17V7m0 10h6m-6 0a2 2 0 110-4 2 2 0 010 4zm6 0a2 2 0 110-4 2 2 0 010 4zM5 7h14a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2z">
                 Vehicle Inventory
+            </x-nav-item>
+            <x-nav-item href="{{ route('maintenance.index') }}"
+                active="{{ Route::currentRouteName() === 'maintenance.index' }}"
+                icon="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                Maintenance Management
             </x-nav-item>
             <!-- Vendor Routes -->
         @elseif (Auth::user()->role === 'Vendor')
